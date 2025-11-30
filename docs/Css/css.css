@@ -1,0 +1,106 @@
+#element {
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-left: 150%;
+  margin-top: 250px;
+    z-index: 10 !important; /* Zwiększono z-index */
+  position: absolute; /* Dodano pozycjonowanie */
+}
+
+#boom {
+  display: none;
+  position: fixed; /* <- kluczowa zmiana! */
+  top: 0;
+  left: 0;
+  width: 250px; /* dostosuj wielkość */
+  height: auto;
+  pointer-events: none; /* żeby nie blokował kliknięć */
+  z-index: 1000; /* nad kotkiem i laserami */
+}
+
+/*.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}*/
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-5px, 5px); }
+  50% { transform: translate(5px, -5px); }
+  75% { transform: translate(-5px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake {
+  animation: shake 0.5s infinite;
+}
+#h{
+  width: 100%;
+  display: none;
+  color:brown;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 100px;
+}
+@keyframes growAndFade {
+  0% { font-size: 100px; opacity: 1; }
+  50% { font-size: 150px; opacity: 1; }
+  100% { font-size: 200px; opacity: 0; }
+}
+
+.grow {
+  animation: growAndFade 2s ease forwards;
+  text-align: center;
+  color: red;
+}
+
+
+#przycisk{
+  margin-top: 300px;
+  margin-left: 30%;
+  font-size: 45px;
+}
+
+.spinAndScale {
+  animation: spinAndScale 1s linear infinite;
+}
+
+@keyframes spinAndPulse {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.5); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.spinAndPulse {
+  animation: spinAndPulse 1s linear infinite;
+}
+
+#hoiiai {
+  display: none;
+  position: absolute;
+  bottom: 0; /* umieszcza napis przy dolnej krawędzi obrazka */
+  transform: translateX(-50%);
+  color: rgba(0, 0, 0, 0.1);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  text-align: justify;
+  width: 500%;
+  height:600px;
+  margin-top: 100px;
+  z-index: 1 !important;
+}
+#container {
+  position: relative;
+  width: 25%;
+}
+
+body{
+  overflow: hidden;
+}
+
+canvas {
+    display: block;
+  }
